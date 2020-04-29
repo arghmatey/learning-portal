@@ -25,8 +25,10 @@ const apps = [
     { name: 'WolframAlpha', url: 'https://apps.apple.com/us/app/wolframalpha/id334989259', img: 'https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/5c/5a/57/5c5a578d-c15c-f127-3b23-80ca031c42fe/WolframAlpha-AppIcon-0-0-1x_U007emarketing-0-0-0-5-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/230x0w.png' },
     { name: 'StudyBlue', url: 'https://apps.apple.com/us/app/studyblue/id323887414', img: 'https://is2-ssl.mzstatic.com/image/thumb/Purple128/v4/42/e2/e9/42e2e9de-5a89-f749-4326-b96733920698/AppIcon-0-1x_U007emarketing-0-0-85-220-0-10.png/230x0w.png' },
     { name: 'TED', url: 'https://apps.apple.com/us/app/ted/id376183339', img: 'https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/b5/bb/15/b5bb15e5-da19-6fe3-75cd-29e6560f149d/AppIcon-1x_U007emarketing-0-7-0-85-220.png/230x0w.png' },
-    { name: '', url: '', img: '' },
-
+    { name: 'ScratchJr', url: 'https://apps.apple.com/us/app/scratchjr/id895485086', img: 'https://is5-ssl.mzstatic.com/image/thumb/Purple113/v4/59/21/9c/59219c90-f6e6-fc83-de6e-720c654e2a92/AppIcon-0-0-1x_U007emarketing-0-0-5-85-220.png/230x0w.png' },
+    { name: 'Hopscotch', url: 'https://apps.apple.com/us/app/hopscotch-programming-for-kids/id617098629', img: 'https://is2-ssl.mzstatic.com/image/thumb/Purple123/v4/fd/62/d4/fd62d497-91d5-4181-9d22-401862e7150b/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-85-220.png/230x0w.png' },
+    { name: 'Coding Ninjas', url: 'https://apps.apple.com/us/app/coding-ninjas/id1363729436', img: 'https://is5-ssl.mzstatic.com/image/thumb/Purple123/v4/00/92/7c/00927c21-cad4-240c-3d05-21f145db9edd/AppIcon-1x_U007emarketing-0-7-0-0-85-220.png/230x0w.png' },
+    { name: 'Little Bird Tales ', url: 'https://apps.apple.com/us/app/little-bird-tales-storytelling/id517996494', img: 'https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/c1/df/f6/c1dff6d0-b115-e802-731e-8eea603387bc/AppIcon-0-1x_U007emarketing-85-220-6.png/230x0w.png' },
 ]
 
 export default apps;
