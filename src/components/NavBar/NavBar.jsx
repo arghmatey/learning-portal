@@ -5,10 +5,11 @@ import { Link } from 'react-router-dom';
 const NavBar = (props) => {
     let nav = props.user ?
         <div className="nav-links">
-            <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="" /></div></Link>
-            <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="" /></div></Link>
-            <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="" /></div></Link>
-            <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="" /></div></Link>
+            <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="./icons/home.png" /></div></Link>
+            <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="./icons/apps.png" /></div></Link>
+            <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="./icons/progress.png" /></div></Link>
+            <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="./icons/message.png" /></div></Link>
+            <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="./icons/logout.png" /></div></Link>
         </div>
         :
         <div>
