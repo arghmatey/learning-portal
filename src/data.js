@@ -29,6 +29,7 @@ const apps = [
     { name: 'Hopscotch', url: 'https://apps.apple.com/us/app/hopscotch-programming-for-kids/id617098629', img: 'https://is2-ssl.mzstatic.com/image/thumb/Purple123/v4/fd/62/d4/fd62d497-91d5-4181-9d22-401862e7150b/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-85-220.png/230x0w.png' },
     { name: 'Coding Ninjas', url: 'https://apps.apple.com/us/app/coding-ninjas/id1363729436', img: 'https://is5-ssl.mzstatic.com/image/thumb/Purple123/v4/00/92/7c/00927c21-cad4-240c-3d05-21f145db9edd/AppIcon-1x_U007emarketing-0-7-0-0-85-220.png/230x0w.png' },
     { name: 'Little Bird Tales ', url: 'https://apps.apple.com/us/app/little-bird-tales-storytelling/id517996494', img: 'https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/c1/df/f6/c1dff6d0-b115-e802-731e-8eea603387bc/AppIcon-0-1x_U007emarketing-85-220-6.png/230x0w.png' },
+    
 ]
 
 export default apps;
