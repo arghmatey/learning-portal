@@ -1,18 +1,18 @@
 import React from 'react';
+import './NavBar.css';
 import { Link } from 'react-router-dom';
 
 const NavBar = (props) => {
     let nav = props.user ?
-        <div>
-            <Link to='' onClick={props.handleLogout}>Logout</Link>
-            &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-            <span>Welcome, {props.user.name}</span>
+        <div className="nav-links">
+            <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="" /></div></Link>
+            <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="" /></div></Link>
+            <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="" /></div></Link>
+            <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="" /></div></Link>
         </div>
         :
         <div>
-            <Link to='/login'>Login</Link>
-            &nbsp;&nbsp;|&nbsp;&nbsp;
-            <Link to='/register'>Register</Link>
+            no user logged in
         </div>;
 
     return (

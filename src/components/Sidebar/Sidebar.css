@@ -1,0 +1,27 @@
+.sidebar-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-wrapper {
+    height: 100px;
+    width: 200px;
+    margin-top: 50px;
+    outline: 1px solid blue;
+}
+
+.cal-wrapper {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.react-calendar__month-view__weekdays {
+    text-align: center;
+    font-size: 10px;
+}
+
+.react-calendar__month-view__weekdays abbr {
+    text-decoration: none;
+}

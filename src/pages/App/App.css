@@ -14,14 +14,28 @@
 }
 
 .App-header {
-  min-height: 10vh;
-  background-color: white;
+  width: 175px;
+  height: 100%;
+  background: white;
   color: black;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 10px 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
   outline: 1px solid black;
-  padding: 10px;
+}
+
+.App-aside {
+  width: 250px;
+  height: 100%;
+  background: white;
+  color: black;
+  padding: 10px 0px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  outline: 1px solid purple;
 }
 
 .App-main {

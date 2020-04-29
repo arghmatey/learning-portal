@@ -1,0 +1,20 @@
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.temp-wrapper {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    outline: 1px solid orangered;
+}
+
+.nav-icon {
+    height: 50px;
+    width: 50px;
+    outline: 1px solid lime;
+}
