@@ -36,7 +36,7 @@ class App extends Component {
             />
           </header>
         </div>
-        <main>
+        <main className="App-main">
           <Route exact path='/register' render={({ history }) =>
             <RegisterPage
               history={history}
