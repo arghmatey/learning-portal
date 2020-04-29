@@ -26,7 +26,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="App">
         <div className="header-wrapper">
           <header className="App-header">
             Learning Portal
