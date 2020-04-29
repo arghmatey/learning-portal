@@ -4,6 +4,9 @@ import './index.css';
 import App from './pages/App/App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from 'react-router-dom';
+import './fonts/AvenirNext-Regular.ttf';
+import './fonts/AvenirNext-Medium.ttf';
+import './fonts/AvenirNext-Bold.ttf';
 
 ReactDOM.render(
   <Router><App /></Router>,
