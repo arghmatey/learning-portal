@@ -10,7 +10,6 @@ export default class AppButton extends Component {
                         <img alt={this.props.name} src={this.props.img} className="appButton" />
                     </a>
                     {this.props.name}
-
                 </>
             </div>
         )
