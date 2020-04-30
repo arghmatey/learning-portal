@@ -1,0 +1,13 @@
+.login-wrapper {
+    /* font-family: Avenir; */
+    background-color: #E8E7EE;
+    border: 10px;
+    border-radius: 10px;
+    font-family: 'Nunito';
+    font-style:normal;
+
+}@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+.lb {
+    background-color: #7670D8;
+}
