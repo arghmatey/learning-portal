@@ -1,21 +1,32 @@
-.nav-links {
+.nav-links, .logout-link {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
+    justify-items: start;
+    align-items: left;
+    padding-top: 50px;
+}
+
+.nav-links a, .logout-link a {
+    text-decoration: none;
+    color: black;
 }
 
 .temp-wrapper {
-    height: 50px;
-    width: 50px;
-    margin: 10px;
-    /* outline: 1px solid orangered; */
+    display: flex;
+    line-height: 50px;
 }
 
-.nav-icon {
+.temp-wrapper img, .logout-link img {
     height: 50px;
     width: 50px;
-    opacity: 70%;
+    /* outline: 1px solid lime; */
+}
+
+.logout-link img {
+    height: 35px;
+    width: 35px;
+    margin: 7px;
+    display: fixed;
+    bottom: 0;
     /* outline: 1px solid lime; */
 }
