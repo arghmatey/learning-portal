@@ -21,7 +21,11 @@ class Dashboard extends Component {
                 </div>
                 <main className="Dash-main">
                     <Route exact path='/applications' render={() =>
-                        <AppPage />
+                        <AppPage
+                            user={this.props.user}
+                            favApps={this.props.favApps}
+                            handleFavApp={this.props.handleFavApp}
+                        />
                     }
                     />
                 </main>

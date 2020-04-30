@@ -5,12 +5,14 @@ import LoginForm from '../../components/LoginForm/LoginForm';
 import RegisterForm from '../../components/RegisterForm/RegisterForm';
 import Dashboard from '../Dashboard/Dashboard'
 import userService from '../../utils/userService';
+import favAppService from '../../utils/favAppService';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       user: userService.getUser(),
+      favApps: [],
       view: 'login',
       message: '',
     };
@@ -34,12 +36,23 @@ class App extends Component {
     this.setState({ view: option });
   }
 
+  handleFavApp = async favAppData => {
+    const favApp = await favAppService.create(favAppData)
+    console.log(favApp)
+    this.setState(state => ({
+      favApps: [...state.favApps, favApp]
+    }));
+    console.log(this.state)
+  }
+
   render() {
     let app = this.state.user ?
       <div className="App">
         <Dashboard
           user={this.state.user}
+          favApps={this.state.favApps}
           handleLogout={this.handleLogout}
+          handleFavApp={this.handleFavApp}
         />
       </div>
       :
