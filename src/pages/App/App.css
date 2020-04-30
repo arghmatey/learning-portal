@@ -46,7 +46,7 @@ html, body, #root, .all-wrapper {
 .App-header {
   width: 175px;
   height: 100%;
-  background:#3c3f89;
+  background: #3c3f89;
   color: black;
   padding: 10px 0px;
   position: fixed;
@@ -54,7 +54,6 @@ html, body, #root, .all-wrapper {
   left: 0;
   text-align: center;
   outline: 1px solid black;
-
 }
 
 .App-aside {
@@ -85,6 +84,7 @@ html, body, #root, .all-wrapper {
 
 .Dash-main {
   display: flex;
+  flex-direction: column;
   align-items: center;
   flex: 1;
   overflow: auto;

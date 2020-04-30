@@ -18,4 +18,18 @@ export function create(formData) {
     }).then(res => res.json());
 }
 
-export default { create }
+async function getFavList() {
+    return fetch(BASE_URL + 'getFavList', {
+        headers: {
+            'Content-type': 'application/json',
+            'Authorization': 'Bearer ' + tokenService.getToken()
+        }
+    }).then(res => {
+        if (res.ok) return res.json();
+        throw new Error('Invalid request to getFavList');
+    }).then(data => {
+        return data
+    })
+}
+
+export default { create, getFavList }

@@ -12,19 +12,23 @@ class Dashboard extends Component {
             <div className="App">
                 <div className="header-wrapper">
                     <header className="App-header">
-                    <img className="app-logo" alt="logo" src="./icons/Logo.png" />
-                            <NavBar
+                        <img className="app-logo" alt="logo" src="./icons/Logo.png" />
+                        <NavBar
                             user={this.props.user}
                             handleLogout={this.props.handleLogout}
                         />
                     </header>
                 </div>
                 <main className="Dash-main">
+                    <div className="search-wrapper">
+                        SEARCHBAR
+                    </div>
                     <Route exact path='/applications' render={() =>
                         <AppPage
                             user={this.props.user}
                             favApps={this.props.favApps}
                             handleFavApp={this.props.handleFavApp}
+                            getFavList={this.props.getFavList}
                         />
                     }
                     />
