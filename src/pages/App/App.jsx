@@ -24,6 +24,7 @@ class App extends Component {
   }
 
   handleRegisterOrLogin = () => {
+    this.getFavList();
     this.setState({ user: userService.getUser() });
   }
 
@@ -38,11 +39,14 @@ class App extends Component {
 
   handleFavApp = async favAppData => {
     const favApp = await favAppService.create(favAppData)
-    console.log(favApp)
     this.setState(state => ({
       favApps: [...state.favApps, favApp]
     }));
-    console.log(this.state)
+  }
+
+  getFavList = async () => {
+    const favList = await favAppService.getFavList()
+    this.setState({ favApps: favList })
   }
 
   render() {
@@ -53,6 +57,7 @@ class App extends Component {
           favApps={this.state.favApps}
           handleLogout={this.handleLogout}
           handleFavApp={this.handleFavApp}
+          getFavList={this.getFavList}
         />
       </div>
       :
