@@ -34,7 +34,7 @@ class RegisterForm extends Component {
     render() {
         return (
             <div className="register-form">
-                <form onSubmit={this.handleSubmit} >
+                <form autocomplete="off" onSubmit={this.handleSubmit} >
                     <label for="text">Name</label><br />
                     <input type='text' value={this.state.name} name='name' onChange={this.handleChange} />
                     <label for="email">Email address</label><br />
