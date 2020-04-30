@@ -1,4 +1,4 @@
-.nav-links {
+.nav-links, .logout-link {
     display: flex;
     flex-direction: column;
     justify-items: start;
@@ -6,31 +6,27 @@
     padding-top: 50px;
 }
 
-.nav-links a {
+.nav-links a, .logout-link a {
     text-decoration: none;
     color: black;
 }
 
 .temp-wrapper {
-    margin: 10px;
     display: flex;
     line-height: 50px;
 }
 
-.nav-icon {
+.temp-wrapper img, .logout-link img {
     height: 50px;
     width: 50px;
     /* outline: 1px solid lime; */
 }
 
-.logout-link {
-    display: flex;
-    line-height: 40px;
-    margin: 10px;
-}
-
-.logout-icon {
-    height: 40px;
-    width: 40px;
-    text-decoration: none;
+.logout-link img {
+    height: 35px;
+    width: 35px;
+    margin: 7px;
+    display: fixed;
+    bottom: 0;
+    /* outline: 1px solid lime; */
 }
