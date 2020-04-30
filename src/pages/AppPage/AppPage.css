@@ -9,19 +9,8 @@
 }
 
 .appList {
-<<<<<<< HEAD
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(8, 5vw);
-    grid-gap: 20px;
-}
-body {
-    background:white;
-    border-radius: 20px 20px 20px 20px;
-=======
     display: flex;
     flex-wrap: nowrap;
     overflow-x: hidden;
     
->>>>>>> c5b35d94a5af2c3aedb1a8ca5acdb20c07ce73b3
 }
