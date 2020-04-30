@@ -1,42 +1,42 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import userService from '../../utils/userService';
+import './LoginPage.css'
+import LoginForm from '../../components/LoginForm/LoginForm';
+import RegisterForm from '../../components/RegisterForm/RegisterForm';
 
 class LoginPage extends Component {
 
     state = {
-        email: '',
-        pw: ''
+        view: 'login',
+        message: '',
     };
 
-    handleChange = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value
-        });
+    updateMessage = (msg) => {
+        this.setState({ message: msg });
     }
 
-    handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            await userService.login(this.state);
-            console.log('made it this far');
-            this.props.handleRegisterOrLogin();
-            this.props.history.push('/');
-        } catch (err) {
-            alert('Invalid login activated on loginpage');
-        }
+    handleViewChange = e => {
+        let option = e.target.value;
+        this.setState({ view: option });
     }
 
     render() {
         return (
-            <div>
-                <header>Log In</header>
-                <form onSubmit={this.handleSubmit} >
-                    <input type="email" className="form-control" placeholder="Email" value={this.state.email} name="email" onChange={this.handleChange} />
-                    <input type="password" className="form-control" placeholder="Password" value={this.state.pw} name="pw" onChange={this.handleChange} />
-                    <button>Log In</button>&nbsp;&nbsp;&nbsp;
-              <Link to='/'>Cancel</Link>
-                </form >
+            <div className="view-wrapper">
+                {
+                    this.state.view === 'login' ?
+                        <LoginForm
+                            history={this.props.history}
+                            handleRegisterOrLogin={this.props.handleRegisterOrLogin}
+                            handleViewChange={this.handleViewChange}
+                        />
+                        :
+                        <RegisterForm
+                            history={this.props.history}
+                            handleRegisterOrLogin={this.props.handleRegisterOrLogin}
+                            handleViewChange={this.handleViewChange}
+                            updateMessage={this.updateMessage}
+                        />
+                }
             </div >
         );
     }

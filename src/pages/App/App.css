@@ -1,6 +1,10 @@
+html, body, #root, .all-wrapper {
+  height: 100%;
+}
+
 .App {
   font-family: 'AvenirNext';
-  text-align: center;
+  height: 100%;
 }
 
 .App-logo {
@@ -12,6 +16,29 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.app-logo {
+  height: 125px;
+}
+
+.login-header {
+  padding: 25px;
+}
+
+.login-nav {
+  height: 125px;
+  display: flex;
+  line-height: 125px;
+  justify-content: space-between;
+}
+
+.login-nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  padding-left: 30px;
+  padding-right: 20px;
 }
 
 .App-header {
@@ -40,13 +67,122 @@
 }
 
 .App-main {
-  margin: 0 175px;
+  display: flex;
+  align-items: center;
   flex: 1;
   overflow: auto;
 }
 
+.homepage {
+  background: url('../../images/Homepage-Image.png');
+  background-size: 40%;
+  background-position: bottom 5px right 7px;
+  background-repeat: no-repeat;
+}
+
+.Dash-main {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  overflow: auto;
+  margin-left: 175px;
+  margin-right: 250px;
+  padding: 30px;
+}
+
 .App-link {
   color: #61dafb;
+}
+
+.purple-text {
+  color: #7670D8;
+}
+
+.view-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.statement {
+  padding: 30px;
+  padding-top: 0;
+  font-size: 42px;
+  height: 350px;
+  width: 425px;
+}
+
+.login-form, .register-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  width: 300px;
+  padding: 20px;
+  padding: 20px;
+  border: 1px solid grey;
+  border-radius: 2px;
+}
+
+.view-wrapper input {
+  width: 95%;
+  height: 25px;
+  padding-left: 7px;
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+.login-button, .register-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form .lb, .register-form .rb {
+  text-transform: uppercase;
+  height: 30px;
+  width: 75px;
+  border-radius: 3px;
+}
+
+.login-form label, .register-form label {
+  align-self: left;
+}
+
+.login-form span, .register-form span {
+  font-size: 12px;
+  text-align: center;
+}
+
+.pword-forgot {
+  text-align: right;
+  width: 100%;
+}
+
+.view-wrapper a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+.q-wrap {
+  width: 100%;
+  text-align: center;
+}
+
+.view-wrapper button[type="button"] {
+  font-weight: bold;
+  background: none;
+  border: none;
+  padding: 0;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @keyframes App-logo-spin {

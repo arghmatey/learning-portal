@@ -4,16 +4,22 @@ import { Link } from 'react-router-dom';
 
 const NavBar = (props) => {
     let nav = props.user ?
-        <div className="nav-links">
-            <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="./icons/home.png" /></div></Link>
-            <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="./icons/apps.png" /></div></Link>
-            <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="./icons/progress.png" /></div></Link>
-            <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="./icons/message.png" /></div></Link>
-            <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="./icons/logout.png" /></div></Link>
-        </div>
+        <>
+            <div className="nav-links">
+                <Link to=''><div className="temp-wrapper"><img alt="X" src="./icons/home.png" />Home</div></Link>
+                <Link to='/applications'><div className="temp-wrapper"><img alt="X" src="./icons/apps.png" />Applications</div></Link>
+                <Link to=''><div className="temp-wrapper"><img alt="X" src="./icons/chart-line.png" />Progress</div></Link>
+                <Link to=''><div className="temp-wrapper"><img alt="X" src="./icons/forum.png" />Chat</div></Link>
+            </div>
+            <div className="logout-link">
+                <Link to='' onClick={props.handleLogout}><div className="temp-wrapper"><img alt="X" src="./icons/logout.png" />Logout</div></Link>
+            </div>
+        </>
         :
         <div>
-            no user logged in
+            <Link to='/login' className="neon-nav">Login</Link>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <Link to='/signup' className="neon-nav">Signup</Link>
         </div>;
 
     return (
