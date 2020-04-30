@@ -34,16 +34,27 @@ class RegisterForm extends Component {
 
     render() {
         return (
-            <div>
-                <header>Sign Up</header>
-                <form onSubmit={this.handleSubmit}>
-                    <input type='text' placeholder='Name' value={this.state.name} name='name' onChange={this.handleChange} />
-                    <input type='email' placeholder='Email' value={this.state.email} name='email' onChange={this.handleChange} />
-                    <input type="password" placeholder='Password' value={this.state.password} name='password' onChange={this.handleChange} />
-                    <input type="password" placeholder='Password' value={this.state.passwordConf} name='passwordConf' onChange={this.handleChange} />
-                    <button type="submit" disabled={this.state.invalidForm}>Register</button>&nbsp;&nbsp;
-                    <Link to='/'>Cancel</Link>
-                </form>
+            <div className="register-form">
+                <form onSubmit={this.handleSubmit} >
+                    <label for="text">Name</label><br />
+                    <input type='text' value={this.state.name} name='name' onChange={this.handleChange} />
+                    <label for="email">Email address</label><br />
+                    <input type="email" className="form-control" value={this.state.email} name="email" onChange={this.handleChange} />
+                    <br />
+                    <br />
+                    <label for="password">Password</label>
+                    <br />
+                    <input type="password" className="form-control" placeholder="" value={this.state.password} name="password" onChange={this.handleChange} />
+                    <br />
+                    <label for="passwordConf">Confirm Password</label>
+                    <br />
+                    <input type="password" className="form-control" placeholder="" value={this.state.passwordConf} name="passwordConf" onChange={this.handleChange} />
+                    <br />
+                    <div className="register-button">
+                        <button type="submit" disabled={this.state.invalidForm}>Register</button>
+                    </div>
+                    <span>Already have an account? <Link to=''>Login</Link></span>
+                </form >
             </div>
         );
     }
