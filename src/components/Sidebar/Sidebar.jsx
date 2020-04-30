@@ -11,13 +11,15 @@ const Sidebar = (props) => {
                 <span>Welcome, {props.user.name}</span>&nbsp;
                 <button className="dropdown-button">⌄</button>
             </div>
-            <div className="todo-wrapper">
+            <div className="cal-wrapper">
                 <div>
-                    <TodoList/>
+                    
+                    <Calendar />
                 </div>
             </div>
-            <div className="cal-wrapper">
-                <Calendar />
+            <div className="todo-wrapper">
+                
+                <TodoList/>
             </div>
         </div>
         :
