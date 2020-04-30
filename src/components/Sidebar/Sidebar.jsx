@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Calendar from 'react-calendar';
+import TodoList from "../TodoList/TodoList"
 import './Sidebar.css';
 
 const Sidebar = (props) => {
@@ -11,7 +12,9 @@ const Sidebar = (props) => {
                 <button className="dropdown-button">⌄</button>
             </div>
             <div className="todo-wrapper">
-                <div>TODO LIST</div>
+                <div>
+                    <TodoList/>
+                </div>
             </div>
             <div className="cal-wrapper">
                 <Calendar />
