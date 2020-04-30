@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import userService from '../../utils/userService';
 
 class RegisterForm extends Component {
@@ -41,7 +40,6 @@ class RegisterForm extends Component {
                     <label for="email">Email address</label><br />
                     <input type="email" className="form-control" value={this.state.email} name="email" onChange={this.handleChange} />
                     <br />
-                    <br />
                     <label for="password">Password</label>
                     <br />
                     <input type="password" className="form-control" placeholder="" value={this.state.password} name="password" onChange={this.handleChange} />
@@ -51,9 +49,9 @@ class RegisterForm extends Component {
                     <input type="password" className="form-control" placeholder="" value={this.state.passwordConf} name="passwordConf" onChange={this.handleChange} />
                     <br />
                     <div className="register-button">
-                        <button type="submit" disabled={this.state.invalidForm}>Register</button>
+                        <button className="rb" type="submit" disabled={this.state.invalidForm}>Register</button>
                     </div>
-                    <span>Already have an account? <Link to=''>Login</Link></span>
+                    <div className="q-wrap"><span>Already have an account? <button type="button" onClick={this.props.handleViewChange} value="login">Login</button></span></div>
                 </form >
             </div>
         );

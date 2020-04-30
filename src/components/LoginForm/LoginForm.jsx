@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import userService from '../../utils/userService';
 
 class LoginForm extends Component {
@@ -45,9 +44,9 @@ class LoginForm extends Component {
                         </div>
                         <br />
                         <div className="login-button">
-                            <button>Log In</button>
+                            <button className="lb">Log In</button>
                         </div>
-                        <span>Don't have an account? <Link to=''>Create one</Link></span>
+                        <span>Don't have an account? <button type="button" onClick={this.props.handleViewChange} value="register">Create one</button></span>
                     </form >
                 </div>
             </div >

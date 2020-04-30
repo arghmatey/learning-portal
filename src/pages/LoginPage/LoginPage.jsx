@@ -9,24 +9,28 @@ class LoginPage extends Component {
         view: 'login',
     };
 
-    handleViewChange(option) {
+    handleViewChange = e => {
+        let option = e.target.value;
         this.setState({ view: option })
     }
-
 
     render() {
         return (
             <div className="view-wrapper">
-                <LoginForm
-                    history={this.props.history}
-                    handleRegisterOrLogin={this.props.handleRegisterOrLogin}
-                    handleViewChange={this.handleViewChange}
-                />
-                <RegisterForm
-                    history={this.props.history}
-                    handleRegisterOrLogin={this.props.handleRegisterOrLogin}
-                    handleViewChange={this.handleViewChange}
-                />
+                {
+                    this.state.view === 'login' ?
+                        <LoginForm
+                            history={this.props.history}
+                            handleRegisterOrLogin={this.props.handleRegisterOrLogin}
+                            handleViewChange={this.handleViewChange}
+                        />
+                        :
+                        <RegisterForm
+                            history={this.props.history}
+                            handleRegisterOrLogin={this.props.handleRegisterOrLogin}
+                            handleViewChange={this.handleViewChange}
+                        />
+                }
             </div >
         );
     }
