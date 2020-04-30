@@ -22,7 +22,7 @@ class LoginForm extends Component {
             this.props.handleRegisterOrLogin();
             this.props.history.push('/');
         } catch (err) {
-            alert('Invalid login');
+            console.log('Invalid login');
         }
     }
 

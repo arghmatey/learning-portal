@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './pages/App/App';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './fonts/AvenirNext-Regular.ttf';
 import './fonts/AvenirNext-Medium.ttf';
 import './fonts/AvenirNext-Bold.ttf';
 
 ReactDOM.render(
-  <Router><App /></Router>,
+  <Router><Route render={({ history }) => <App history={history} />} /> </Router>,
   document.getElementById('root')
 );
 

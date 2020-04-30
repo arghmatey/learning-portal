@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './App.css';
-import { Route } from 'react-router-dom'
-import NavBar from '../../components/NavBar/NavBar';
-import Sidebar from '../../components/Sidebar/Sidebar';
-import RegisterPage from '../RegisterPage/RegisterPage';
-import LoginPage from '../LoginPage/LoginPage';
+import LoginForm from '../../components/LoginForm/LoginForm';
+import RegisterForm from '../../components/RegisterForm/RegisterForm';
+import Dashboard from '../Dashboard/Dashboard'
 import userService from '../../utils/userService';
-import AppPage from '../AppPage/AppPage';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      user: userService.getUser()
+      user: userService.getUser(),
+      view: 'login',
+      message: '',
     };
   }
 
@@ -25,46 +25,64 @@ class App extends Component {
     this.setState({ user: userService.getUser() });
   }
 
+  updateMessage = (msg) => {
+    this.setState({ message: msg });
+  }
+
+  handleViewChange = e => {
+    let option = e.target.value;
+    this.setState({ view: option });
+  }
+
   render() {
-    return (
+    let app = this.state.user ?
       <div className="App">
-        <div className="header-wrapper">
-          <header className="App-header">
-            Learning Portal
-          <NavBar
-              user={this.state.user}
-              handleLogout={this.handleLogout}
-            />
-          </header>
-        </div>
-        <main className="App-main">
-          <Route exact path='/applications' render={() =>
-            <AppPage/>
-          }
-          />
-          <Route exact path='/register' render={({ history }) =>
-            <RegisterPage
-              history={history}
-              handleRegisterOrLogin={this.handleRegisterOrLogin}
-            />
-          } />
-          <Route exact path='/login' render={({ history }) =>
-            <LoginPage
-              history={history}
-              handleRegisterOrLogin={this.handleRegisterOrLogin}
-            />
-          } />
-        </main>
-        <div className="aside-wrapper">
-          <aside className="App-aside">
-            <Sidebar
-              user={this.state.user}
-              handleLogout={this.handleLogout}
-            />
-          </aside>
-        </div>
+        <Dashboard
+          user={this.state.user}
+          handleLogout={this.handleLogout}
+        />
       </div>
-    )
+      :
+      <div className="App homepage">
+        <header className="login-header">
+          <nav className="login-nav">
+            <img className="app-logo" alt="logo" src="./icons/Logo.png" />
+            <div className="login-nav-links">
+              <Link to=''>How It Works</Link>
+              <Link to=''>Request a Demo</Link>
+              <Link to=''>About Us</Link>
+            </div>
+          </nav>
+        </header>
+        <main className="App-main">
+          <div className="view-wrapper">
+            {
+              this.state.view === 'login' ?
+                <LoginForm
+                  history={this.history}
+                  handleRegisterOrLogin={this.handleRegisterOrLogin}
+                  handleViewChange={this.handleViewChange}
+                />
+                :
+                <RegisterForm
+                  history={this.history}
+                  handleRegisterOrLogin={this.handleRegisterOrLogin}
+                  handleViewChange={this.handleViewChange}
+                  updateMessage={this.updateMessage}
+                />
+            }
+            <div className="statement">Digital learning all in one place. It's time to get a <span className="purple-text">grasp</span> on things.</div>
+          </div >
+
+        </main>
+      </div>
+
+
+    return (
+      <div className="all-wrapper">
+        {app}
+      </div>
+    );
   }
 };
 
