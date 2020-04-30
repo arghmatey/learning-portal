@@ -6,10 +6,10 @@ const NavBar = (props) => {
     let nav = props.user ?
         <>
             <div className="nav-links">
-                <Link to=''><div className="temp-wrapper"><img alt="X" src="./icons/home.png" />Home</div></Link>
+                <Link to='/homepage'><div className="temp-wrapper"><img alt="X" src="./icons/home.png" />Home</div></Link>
                 <Link to='/applications'><div className="temp-wrapper"><img id='apps' alt="X" src="./icons/apps.png" />Applications</div></Link>
-                <Link to=''><div className="temp-wrapper"><img alt="X" src="./icons/chart-line.png" />Progress</div></Link>
-                <Link to=''><div className="temp-wrapper"><img alt="X" src="./icons/forum.png" />Chat</div></Link>
+                <Link to='/progress'><div className="temp-wrapper"><img alt="X" src="./icons/chart-line.png" />Progress</div></Link>
+                <Link to='/chat'><div className="temp-wrapper"><img alt="X" src="./icons/forum.png" />Chat</div></Link>
             </div>
             <br></br>
             <div className="logoutlink">

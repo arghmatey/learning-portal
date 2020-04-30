@@ -20,10 +20,7 @@ class AppPage extends Component {
                                 </>
                             )
                             : <div>add an app</div>}
-                    </div>
-                    <div>
-                        <h3>Your Apps</h3>
-                    </div>
+                        </div>
                     <div>
                         <h3>Apps we think you'll like</h3>
                         <AppList
