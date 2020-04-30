@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom'
 import NavBar from '../../components/NavBar/NavBar';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import AppPage from '../AppPage/AppPage';
+import './Dashboard.css';
 
 class Dashboard extends Component {
 
@@ -11,7 +12,7 @@ class Dashboard extends Component {
             <div className="App">
                 <div className="header-wrapper">
                     <header className="App-header">
-                        Learning Portal
+                    <img className="app-logo" alt="logo" src="./icons/Logo.png" />
                             <NavBar
                             user={this.props.user}
                             handleLogout={this.props.handleLogout}
