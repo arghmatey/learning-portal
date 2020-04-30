@@ -10,10 +10,13 @@ const NavBar = (props) => {
             <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="./icons/progress.png" /></div></Link>
             <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="./icons/message.png" /></div></Link>
             <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="./icons/logout.png" /></div></Link>
+            <Link to='' onClick={props.handleLogout} className="neon-nav">Logout</Link>
         </div>
         :
         <div>
-            no user logged in
+            <Link to='/login' className="neon-nav">Login</Link>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <Link to='/signup' className="neon-nav">Signup</Link>
         </div>;
 
     return (
