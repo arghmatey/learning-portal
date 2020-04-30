@@ -7,11 +7,16 @@ class LoginPage extends Component {
 
     state = {
         view: 'login',
+        message: '',
     };
+
+    updateMessage = (msg) => {
+        this.setState({ message: msg });
+    }
 
     handleViewChange = e => {
         let option = e.target.value;
-        this.setState({ view: option })
+        this.setState({ view: option });
     }
 
     render() {
@@ -29,6 +34,7 @@ class LoginPage extends Component {
                             history={this.props.history}
                             handleRegisterOrLogin={this.props.handleRegisterOrLogin}
                             handleViewChange={this.handleViewChange}
+                            updateMessage={this.updateMessage}
                         />
                 }
             </div >
