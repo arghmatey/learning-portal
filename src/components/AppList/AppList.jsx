@@ -14,12 +14,12 @@ export default class AppList extends Component {
                             img={app.img}
                             name={app.name}
                         />
-                        <button onClick={() => this.props.handleFavApp({
+                        <button style={{"height" : "20%", "borderRadius": "20%", "fontSize" : "10px", "margin" : "1.5% .2% 1% 0%"}} onClick={() => this.props.handleFavApp({
                             favoritedBy: this.props.user,
                             name: app.name,
                             url: app.url,
                             img: app.img
-                        })}>Add
+                        })}>Add to Favs
                     </button>
                     </>
                 )

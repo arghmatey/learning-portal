@@ -21,7 +21,7 @@ html, body, #root, .all-wrapper {
 .app-logo {
   position: relative;
   height: 125px;
-  left: 30px;
+  left: 50px;
 }
 
 .login-header {
@@ -44,7 +44,7 @@ html, body, #root, .all-wrapper {
 }
 
 .App-header {
-  width: 175px;
+  width: 220px;
   height: 100%;
   background: #3c3f89;
   color: black;
@@ -88,7 +88,7 @@ html, body, #root, .all-wrapper {
   align-items: center;
   flex: 1;
   overflow: auto;
-  margin-left: 175px;
+  margin-left: 220px;
   margin-right: 250px;
   padding: 30px;
 }

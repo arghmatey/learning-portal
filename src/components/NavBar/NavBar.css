@@ -6,6 +6,7 @@
 }
 .nav-links{
     padding-top: 50px;
+    padding-left: 30px;
 
 }
 
@@ -55,5 +56,11 @@
   
   .logoutlink {
     padding-top: 0px;
-    margin-top:230%;
+    margin-top:330px;
+  }
+  #apps {
+      height:40px;
+      width: 40px;
+      padding-left: 6px;
+      padding-top: 6px;
   }
