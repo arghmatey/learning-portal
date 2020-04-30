@@ -1,0 +1,13 @@
+.appButton {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.appList {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 20px;
+}

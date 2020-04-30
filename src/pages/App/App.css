@@ -41,10 +41,10 @@
 .App-main {
   margin: 0 175px;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex: 1;
   overflow: auto;
+  margin-left: 175px;
 }
 
 .App-link {

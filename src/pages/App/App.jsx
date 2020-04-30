@@ -6,6 +6,7 @@ import Sidebar from '../../components/Sidebar/Sidebar';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import LoginPage from '../LoginPage/LoginPage';
 import userService from '../../utils/userService';
+import AppPage from '../AppPage/AppPage';
 
 class App extends Component {
   constructor() {
@@ -37,6 +38,10 @@ class App extends Component {
           </header>
         </div>
         <main className="App-main">
+          <Route exact path='/applications' render={() =>
+            <AppPage/>
+          }
+          />
           <Route exact path='/register' render={({ history }) =>
             <RegisterPage
               history={history}

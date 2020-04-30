@@ -7,7 +7,6 @@ const apps = [
     { name: 'Actively Learn', url: 'https://apps.apple.com/us/app/actively-learn/id1366111784', img: 'https://is4-ssl.mzstatic.com/image/thumb/Purple128/v4/52/93/bc/5293bccd-7bf1-7886-387b-23f1c2cc7e97/AppIcon-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-5.png/230x0w.png' },
     { name: 'Achieve3000', url: 'https://apps.apple.com/us/app/achieve3000/id757933892', img: 'https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/06/29/f2/0629f299-75b2-35cc-5923-810f0eead3d7/AppIcon-0-1x_U007emarketing-0-85-220-0-10.png/230x0w.png' },
     { name: 'Writable', url: 'https://www.writable.com/', img: 'https://1wtywzj54kj2qxsdu4aufiil-wpengine.netdna-ssl.com/wp-content/uploads/2019/02/writable_logo.png' },
-    { name: 'Mozi', url: 'https://www.themozi.com/', img: 'https://www.themozi.com/mozi_white_transparent.png' },
     { name: 'Google Classroom', url: 'https://classroom.google.com/', img: 'https://upload.wikimedia.org/wikipedia/commons/5/59/Google_Classroom_Logo.png' },
     { name: 'ZOOM', url: 'https://apps.apple.com/us/app/zoom-cloud-meetings/id546505307', img: 'https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/e3/4b/a6/e34ba6f3-be8a-b36e-227a-e21c8b119154/AppIcon-0-1x_U007emarketing-0-0-85-220-9.png/217x0w.png' },
     { name: 'Kahoot', url: 'https://apps.apple.com/us/app/kahoot/id1131203560', img: 'https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/2f/84/9c/2f849c37-c4e9-4757-9696-38d28a745977/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/230x0w.png' },
