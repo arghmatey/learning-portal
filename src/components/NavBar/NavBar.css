@@ -1,21 +1,36 @@
 .nav-links {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
+    justify-items: start;
+    align-items: left;
+    padding-top: 50px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
 }
 
 .temp-wrapper {
-    height: 50px;
-    width: 50px;
     margin: 10px;
-    /* outline: 1px solid orangered; */
+    display: flex;
+    line-height: 50px;
 }
 
 .nav-icon {
     height: 50px;
     width: 50px;
-    opacity: 70%;
     /* outline: 1px solid lime; */
+}
+
+.logout-link {
+    display: flex;
+    line-height: 40px;
+    margin: 10px;
+}
+
+.logout-icon {
+    height: 40px;
+    width: 40px;
+    text-decoration: none;
 }

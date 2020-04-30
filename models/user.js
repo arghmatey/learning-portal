@@ -4,6 +4,11 @@ const Schema = mongoose.Schema;
 
 const SALT_ROUNDS = 6;
 
+const todosSchema = new Schema({
+    item: String,
+    complete: false
+})
+
 const userSchema = new Schema({
     name: String,
     email: {
@@ -13,10 +18,8 @@ const userSchema = new Schema({
         unique: true
     },
     password: String,
-    subjects: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Subject'
-    }],
+    apps: [],
+    todos: [todosSchema],
 }, {
     timestamps: true
 });

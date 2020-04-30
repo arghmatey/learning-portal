@@ -5,12 +5,11 @@ import { Link } from 'react-router-dom';
 const NavBar = (props) => {
     let nav = props.user ?
         <div className="nav-links">
-            <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="./icons/home.png" /></div></Link>
-            <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="./icons/apps.png" /></div></Link>
-            <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="./icons/progress.png" /></div></Link>
-            <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="./icons/message.png" /></div></Link>
-            <Link to=''><div className="temp-wrapper"><img alt="X" className="nav-icon" src="./icons/logout.png" /></div></Link>
-            <Link to='' onClick={props.handleLogout} className="neon-nav">Logout</Link>
+            <Link to=''><div className="temp-wrapper"><img alt="home" className="nav-icon" src="./icons/home.png" />Home</div></Link>
+            <Link to=''><div className="temp-wrapper"><img alt="apps" className="nav-icon" src="./icons/apps.png" />Applications</div></Link>
+            <Link to=''><div className="temp-wrapper"><img alt="progress" className="nav-icon" src="./icons/chart-line.png" />Progress</div></Link>
+            <Link to=''><div className="temp-wrapper"><img alt="chat" className="nav-icon" src="./icons/forum.png" />Chat</div></Link>
+            <Link to='' onClick={props.handleLogout} className="logout-link"><img alt="logout" className="logout-icon" src="./icons/logout.png" />Logout</Link>
         </div>
         :
         <div>
