@@ -39,7 +39,6 @@ class LoginForm extends Component {
                         <label for="password">Password</label>
                         <br />
                         <input type="password" className="form-control" placeholder="" value={this.state.pw} name="pw" onChange={this.handleChange} />
-                        <br />
                         <div className="pword-forgot">
                             <span>Forgot Password?</span>
                         </div>
@@ -47,7 +46,7 @@ class LoginForm extends Component {
                         <div className="login-button">
                             <button className="lb">Log In</button>
                         </div>
-                        <span>Don't have an account? <button type="button" onClick={this.props.handleViewChange} value="register">Create one</button></span>
+                        <span>Don't have an account? <button type="button" className="view-change" onClick={this.props.handleViewChange} value="register">Create one</button></span>
                     </form >
                 </div>
             </div >

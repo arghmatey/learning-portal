@@ -6,6 +6,14 @@
     align-items: center;
 }
 
+.login-wrapper, .register-wrapper {
+    background-color: #E8E7EE;
+    border: 10px;
+    border-radius: 10px;
+    font-family: 'Nunito';
+    font-style: normal;
+}
+
 .login-form, .register-form {
     display: flex;
     justify-content: center;
@@ -35,13 +43,6 @@
     justify-content: center;
 }
 
-.login-form .lb, .register-form .rb {
-    text-transform: uppercase;
-    height: 30px;
-    width: 75px;
-    border-radius: 3px;
-}
-
 .login-form label, .register-form label {
     align-self: left;
 }
@@ -65,14 +66,4 @@
 .q-wrap {
     width: 100%;
     text-align: center;
-}
-
-.view-wrapper button[type="button"] {
-    font-weight: bold;
-    background: none;
-    border: none;
-    padding: 0;
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
 }

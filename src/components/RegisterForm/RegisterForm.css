@@ -1,4 +1,4 @@
-.login-wrapper {
+.register-wrapper {
     background-color: #E8E7EE;
     border: 10px;
     border-radius: 10px;
@@ -6,7 +6,7 @@
     font-style: normal;
 }
 
-.login-form {
+.register-form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,12 +17,25 @@
     border-radius: 2px;
 }
 
-.lb {
+.register-form form {
+    width: 200px;
+}
+
+.register-form input {
+    width: 95%;
+    height: 25px;
+    padding-left: 7px;
+    border-radius: 3px;
+    border: 1px solid lightgrey;
+    margin: 2px 0px 10px 0px;
+}
+
+.rb {
     background-color: #7670D8;
     color: #E8E7EE;
     text-transform: uppercase;
     height: 30px;
-    margin-bottom: 5px;
+    margin: 10px 0px 5px 0px;
     border-width: 1px;
     border-radius: 3px;
 }
@@ -32,6 +45,7 @@
     background: none;
     border: none;
     padding: 0;
+    color: #2F2E2E;
     text-decoration: none;
     cursor: pointer;
 }
