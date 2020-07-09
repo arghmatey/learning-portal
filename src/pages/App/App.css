@@ -1,4 +1,6 @@
 html, body, #root, .all-wrapper {
+  border-spacing: 0;
+  margin: 0;
   height: 100%;
 }
 
@@ -102,11 +104,22 @@ html, body, #root, .all-wrapper {
 }
 
 .view-wrapper {
+  perspective: 600px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+}
+
+.view-card {
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  background-color: #E8E7EE;
+  border: 10px;
+  border-radius: 10px;
+  font-family: 'AvenirNext';
+  font-style: normal;
 }
 
 .statement {
@@ -115,27 +128,6 @@ html, body, #root, .all-wrapper {
   font-size: 42px;
   height: 350px;
   width: 425px;
-}
-
-.login-form, .register-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 350px;
-  width: 300px;
-  padding: 20px;
-  padding: 20px;
-  border: 1px solid grey;
-  border-radius: 2px;
-}
-
-.view-wrapper input {
-  width: 95%;
-  height: 25px;
-  padding-left: 7px;
-  border-radius: 3px;
-  border: 1px solid lightgrey;
-  margin-top: 2px;
 }
 
 .login-button, .register-button {

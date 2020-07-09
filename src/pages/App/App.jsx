@@ -74,21 +74,23 @@ class App extends Component {
         </header>
         <main className="App-main">
           <div className="view-wrapper">
-            {
-              this.state.view === 'login' ?
-                <LoginForm
-                  history={this.history}
-                  handleRegisterOrLogin={this.handleRegisterOrLogin}
-                  handleViewChange={this.handleViewChange}
-                />
-                :
-                <RegisterForm
-                  history={this.history}
-                  handleRegisterOrLogin={this.handleRegisterOrLogin}
-                  handleViewChange={this.handleViewChange}
-                  updateMessage={this.updateMessage}
-                />
-            }
+            <div className="view-card">
+              {
+                this.state.view === 'login' ?
+                  <LoginForm
+                    history={this.history}
+                    handleRegisterOrLogin={this.handleRegisterOrLogin}
+                    handleViewChange={this.handleViewChange}
+                  />
+                  :
+                  <RegisterForm
+                    history={this.history}
+                    handleRegisterOrLogin={this.handleRegisterOrLogin}
+                    handleViewChange={this.handleViewChange}
+                    updateMessage={this.updateMessage}
+                  />
+              }
+            </div>
             <div className="statement">Digital learning all in one place. It's time to get a <span className="purple-text">grasp</span> on things.</div>
           </div >
 

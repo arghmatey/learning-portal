@@ -1,20 +1,20 @@
-.login-wrapper {
-    background-color: #E8E7EE;
-    border: 10px;
-    border-radius: 10px;
-    font-family: 'AvenirNext';
-    font-style: normal;
-}
-
 .login-form {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 350px;
     width: 300px;
+    border-radius: 7px;
     padding: 20px;
-    border: 1px solid grey;
-    border-radius: 2px;
+}
+
+.login-form input {
+    width: 95%;
+    height: 25px;
+    padding-left: 7px;
+    border-radius: 3px;
+    border: 1px solid lightgrey;
+    margin-top: 2px;
 }
 
 .lb {
@@ -28,7 +28,7 @@
 }
 
 .view-change {
-    font-weight: bold;
+    font: bold 12px 'AvenirNext';
     background: none;
     border: none;
     padding: 0;
