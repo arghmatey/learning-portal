@@ -23,7 +23,7 @@ class Dashboard extends Component {
                     </header>
                 </div>
                 <main className="Dash-main">      
-                    <Route exact path='/homepage' render={() =>
+                    <Route exact path='/' render={() =>
                         <HomePage
                             user={this.props.user}
                             favApps={this.props.favApps}
@@ -32,7 +32,15 @@ class Dashboard extends Component {
                         />
                     }
                     />
-
+                    <Route exact path='/apps' render={() =>
+                        <AppPage
+                            user={this.props.user}
+                            favApps={this.props.favApps}
+                            handleFavApp={this.props.handleFavApp}
+                            getFavList={this.props.getFavList}
+                        />
+                    }
+                    />
                     <Route exact path='/progress' render={() =>
                         <ProgressPage
                             user={this.props.user}
@@ -44,15 +52,6 @@ class Dashboard extends Component {
                     />
                     <Route exact path='/chat' render={() =>
                         <ChatPage
-                            user={this.props.user}
-                            favApps={this.props.favApps}
-                            handleFavApp={this.props.handleFavApp}
-                            getFavList={this.props.getFavList}
-                        />
-                    }
-                    />
-                    <Route exact path='/applications' render={() =>
-                        <AppPage
                             user={this.props.user}
                             favApps={this.props.favApps}
                             handleFavApp={this.props.handleFavApp}
