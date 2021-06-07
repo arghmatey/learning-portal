@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AppButton from "../AppButton/AppButton"
-import apps from "../../data.js"
+import apps from "../../utils/data.js"
 
 export default class AppList extends Component {
 

@@ -89,12 +89,24 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  /* flex: 1; */
+  /* overflow: auto; */
+  margin-left: 220px;
+  margin-right: 250px;
+  padding: 30px;
+}
+
+/* main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex: 1;
   overflow: auto;
   margin-left: 220px;
   margin-right: 250px;
   padding: 30px;
-}
+} */
 
 .purple-text {
   color: #7670D8;
