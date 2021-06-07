@@ -17,7 +17,7 @@ class Dashboard extends Component {
                     user={this.props.user}
                     handleLogout={this.props.handleLogout}
                 />
-                <main className="Dash-main">      
+                <main>      
                     <Route exact path='/' render={() =>
                         <HomePage
                             user={this.props.user}

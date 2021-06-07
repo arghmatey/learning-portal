@@ -59,7 +59,7 @@ class App extends Component {
           getFavList={this.getFavList}
         />
       :
-      <div className="App-homepage">
+      <div className="login-page">
         <header className="login-header">
           <nav className="login-nav">
             <img className="app-logo" alt="logo" src="./icons/Logo.png" />
