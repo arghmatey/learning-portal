@@ -1,7 +1,12 @@
-html, body, #root, .all-wrapper {
-  border-spacing: 0;
-  margin: 0;
-  height: 100%;
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; 
+}
+
+body {
+   margin: 0;
+   height: 100%;
 }
 
 .App {
@@ -10,9 +15,12 @@ html, body, #root, .all-wrapper {
 }
 
 .app-logo {
-  position: relative;
-  height: 125px;
-  left: 50px;
+  height: 100px;
+}
+
+a {
+  text-decoration: none;
+  color: #E8E7EE;
 }
 
 .login-header {
@@ -34,19 +42,18 @@ html, body, #root, .all-wrapper {
   padding-right: 20px;
 }
 
+/* side nav bar (left)*/
 .App-header {
   width: 220px;
   height: 100%;
-  background: #3c3f89;
-  color: black;
+  background-image: linear-gradient(#3C3F89, #7670D8);
   padding: 10px 0px;
   position: fixed;
   top: 0;
   left: 0;
-  text-align: center;
-  outline: 1px solid black;
 }
 
+/* side bar (right) */
 .App-aside {
   width: 250px;
   height: 100%;
@@ -59,6 +66,7 @@ html, body, #root, .all-wrapper {
   outline: 1px solid purple;
 }
 
+/* main section (middle) */
 .App-main {
   display: flex;
   align-items: center;

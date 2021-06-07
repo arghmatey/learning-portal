@@ -51,7 +51,6 @@ class App extends Component {
 
   render() {
     let app = this.state.user ?
-      <div className="App">
         <Dashboard
           user={this.state.user}
           favApps={this.state.favApps}
@@ -59,9 +58,8 @@ class App extends Component {
           handleFavApp={this.handleFavApp}
           getFavList={this.getFavList}
         />
-      </div>
       :
-      <div className="App homepage">
+      <div className="App-homepage">
         <header className="login-header">
           <nav className="login-nav">
             <img className="app-logo" alt="logo" src="./icons/Logo.png" />

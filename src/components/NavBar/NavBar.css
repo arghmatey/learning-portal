@@ -1,66 +1,47 @@
-.nav-links, .logout-link {
+.nav-app-logo {
     display: flex;
-    flex-direction: column;
-    justify-items: start;
-    align-items: left;
-}
-.nav-links{
-    padding-top: 50px;
-    padding-left: 30px;
-
+    align-items: center;
+    justify-content: center;
+    height: 150px;
 }
 
-
-.nav-links a, .logout-link a {
-    text-decoration: none;
-    color: black;
+.nav-app-logo img {
+    height: 100px;
 }
 
-.temp-wrapper {
-    font-weight: lighter;
+.active-page-indicator {
+    /* background-color: #41C1EB; */
+    background-color: transparent;
+    height: auto;
+    width: 6px;
+    border-radius: 0 70px 70px 0;
+}
+
+.nav-link {
+    height: 45px;
     display: flex;
-    line-height: 50px;
-    color: white;
+    flex-direction: row;
+    font-family: 'AvenirNext-Medium';
+    color: #E8E7EE;
+    padding: 10px 0;
 }
 
-.temp-wrapper img, .logout-link img {
+.nav-link a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-link-icon {
+    height: 40px;
+    margin: 0 10px;
+}
+
+.nav-logout-link {
     height: 50px;
-    width: 50px;
-    /* outline: 1px solid lime; */
-}
-
-.logout-link img {
-    height: 35px;
-    width: 35px;
-    margin: 7px;
-    display: fixed;
+    width: inherit;
+    padding-left: 6px;
+    border-top: 1px solid #E8E7EE;
+    position: fixed;
     bottom: 0;
-    /* outline: 1px solid lime; */
 }
-
-.overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #008CBA; opacity:0.4;
-    overflow: hidden;
-    width: 0;
-    height: 100%;
-    transition: .5s ease;
-  }
-
-  .temp-wrapper :hover .overlay {
-    width: 100%;
-  }
-  
-  .logoutlink {
-    padding-top: 0px;
-    margin-top:330px;
-  }
-  #apps {
-      height:40px;
-      width: 40px;
-      padding-left: 6px;
-      padding-top: 6px;
-  }
