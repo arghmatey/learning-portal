@@ -23,6 +23,34 @@ a {
   color: #E8E7EE;
 }
 
+/* arrow css */
+.arrow {
+  border: solid #2F2E2E;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
 /* EVERYTHING BELOW IS ATTACHED TO LOGIN PAGE */
 
 /* BELOW: login page navbar css */

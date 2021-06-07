@@ -5,6 +5,15 @@
     align-items: center;
 }
 
+.user-wrapper {
+    height: 45px;
+    color: #2F2E2E;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'AvenirNext-Medium';
+}
+
 .todo-wrapper {
     height: 100px;
     width: 200px;

@@ -8,8 +8,8 @@ const Sidebar = (props) => {
     let sidebar = props.user ?
         <div className="sidebar-wrapper">
             <div className="user-wrapper">
-                <span>Welcome, {props.user.name}</span>&nbsp;
-                <button className="dropdown-button">⌄</button>
+                <img alt="User profile image" className="nav-link-icon" src="./icons/Avatar.png" />
+                <span>{props.user.name}</span>
             </div>
             <div className="cal-wrapper">
                 <div>
