@@ -12,28 +12,28 @@ const Sidebar = (props) => {
             </div>
 
 
-            <div class="calendar">
-                <div class="date-today">June 7, 2021</div>
-                <div class="days">
-                    <div class="weekday">
-                    <div class="day-letter">M</div>
-                    <div class="day-number">1</div>
+            <div className="calendar">
+                <div className="date-today">June 7, 2021</div>
+                <div className="days">
+                    <div className="weekday">
+                    <div className="day-letter">M</div>
+                    <div className="day-number">1</div>
                     </div>
-                    <div class="weekday">
-                    <div class="day-letter">Tu</div>
-                    <div class="day-number">2</div>
+                    <div className="weekday">
+                    <div className="day-letter">Tu</div>
+                    <div className="day-number">2</div>
                     </div>
-                    <div class="weekday">
-                    <div class="day-letter">W</div>
-                    <div class="day-number">3</div>
+                    <div className="weekday">
+                    <div className="day-letter">W</div>
+                    <div className="day-number">3</div>
                     </div>
-                    <div class="weekday">
-                    <div class="day-letter">Th</div>
-                    <div class="day-number">4</div>
+                    <div className="weekday">
+                    <div className="day-letter">Th</div>
+                    <div className="day-number">4</div>
                     </div>
-                    <div class="weekday">
-                    <div class="day-letter">F</div>
-                    <div class="day-number">5</div>
+                    <div className="weekday">
+                    <div className="day-letter">F</div>
+                    <div className="day-number">5</div>
                     </div>
                 </div>
 
