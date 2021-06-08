@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Calendar from 'react-calendar';
 import TodoList from "../TodoList/TodoList"
 import './Sidebar.css';
 
@@ -11,12 +10,37 @@ const Sidebar = (props) => {
                 <img alt="User profile image" className="nav-link-icon" src="./icons/Avatar.png" />
                 <span>{props.user.name}</span>
             </div>
-            <div className="cal-wrapper">
-                <div>
-                    
-                    <Calendar />
+
+
+            <div class="calendar">
+                <div class="date-today">June 7, 2021</div>
+                <div class="days">
+                    <div class="weekday">
+                    <div class="day-letter">M</div>
+                    <div class="day-number">1</div>
+                    </div>
+                    <div class="weekday">
+                    <div class="day-letter">Tu</div>
+                    <div class="day-number">2</div>
+                    </div>
+                    <div class="weekday">
+                    <div class="day-letter">W</div>
+                    <div class="day-number">3</div>
+                    </div>
+                    <div class="weekday">
+                    <div class="day-letter">Th</div>
+                    <div class="day-number">4</div>
+                    </div>
+                    <div class="weekday">
+                    <div class="day-letter">F</div>
+                    <div class="day-number">5</div>
+                    </div>
                 </div>
+
+
             </div>
+
+
             <div className="todo-wrapper">
                 
                 <TodoList/>

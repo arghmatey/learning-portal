@@ -95,7 +95,7 @@ a {
   position: fixed;
   top: 0;
   right: 0;
-  outline: 1px solid purple;
+  background-color: #E8E7EE;
 }
 
 /* main section (middle) */
