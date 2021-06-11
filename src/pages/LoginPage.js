@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import LoginForm from '../components/LoginForm/LoginForm';
 import RegisterForm from '../components/RegisterForm/RegisterForm';
 
-
 class LoginPage extends Component {
-
     render() {
         return (
             <div className="login-page">
@@ -30,7 +28,7 @@ class LoginPage extends Component {
                             />
                         }
                     </div>
-                    <div className="statement">Digital learning all in one place. It's time to get a <span className="purple-text">grasp</span> on things.</div>
+                    <div className="statement">Digital learning all in one place. It's time to get a <span style={{color: '#7670D8'}}>grasp</span> on things.</div>
                     </div >
 
                 </main>
