@@ -4,18 +4,13 @@
   box-sizing: border-box; 
 }
 
-body {
-   margin: 0;
-   height: 100%;
-}
-
-.App {
-  font-family: 'AvenirNext';
+html, body, #root, .all-wrapper {
   height: 100%;
 }
 
-.app-logo {
-  height: 100px;
+body {
+   margin: 0;
+   font-family: 'AvenirNext';
 }
 
 a {
@@ -23,57 +18,110 @@ a {
   color: #E8E7EE;
 }
 
-/* arrow css */
-.arrow {
-  border: solid #2F2E2E;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 3px;
+/* BELOW: login page css */
+.login-page {
+  height: 100%;
+  background: url('../../assets/images/login.png');
+  background-size: 40%;
+  background-position: bottom 5px right 7px;
+  background-repeat: no-repeat;
 }
 
-.right {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-}
-
-.left {
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-}
-
-.up {
-  transform: rotate(-135deg);
-  -webkit-transform: rotate(-135deg);
-}
-
-.down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
-
-/* EVERYTHING BELOW IS ATTACHED TO LOGIN PAGE */
-
-/* BELOW: login page navbar css */
-/* 
 .login-header {
-  padding: 25px;
+  padding: 25px 50px;
 }
 
-.login-nav {
-  height: 125px;
+.view-wrapper {
+  width: 100%;
   display: flex;
-  line-height: 125px;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
 }
 
-.login-nav-links a {
-  text-decoration: none;
-  color: #2F2E2E;
-  font-size: 20px;
-  padding-left: 30px;
-  padding-right: 20px;
-} */
+.view-card {
+  background-color: #E8E7EE;
+  border: 1px solid #D7D7D8;
+  border-radius: 3px;
+  font-family: 'AvenirNext';
+}
 
+.login-form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 415px;
+  width: 375px;
+  color: #242223;
+  font-size: 14px;
+  padding: 50px 0;
+}
+
+.login-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.login-input {
+  height: 30px;
+  width: 230px;
+  display: block;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font: 12px 'AvenirNext-UltraLight';
+  padding-left: 10px;
+  margin: 5px 0 10px;
+}
+
+.login-button, .register-button {
+  font-family: 'AvenirNext-Medium';
+  background-color: #7670D8;
+  color: #E8E7EE;
+  height: 40px;
+  width: 105px;
+  border: none;
+  border-radius: 4px;
+  margin: 15px;
+}
+
+.login-subtext {
+  font-size: 12px;
+}
+
+.forgot-password {
+  text-align: right;
+  width: 100%;
+}
+
+.button-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.view-change {
+
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: none;
+  cursor: pointer;
+
+  font: 12px 'AvenirNext-Medium';
+  color: #2F2E2E;
+}
+
+.statement {
+  padding-left: 30px;
+  font-size: 42px;
+  height: 350px;
+  width: 450px;
+}
+
+/* BELOW: Dashboard view css
 /* side nav bar (left)*/
 .App-header {
   width: 220px;
@@ -106,25 +154,6 @@ a {
   overflow: auto;
 }
 
-.homepage {
-  background: url('../../images/Homepage-Image.png');
-  background-size: 40%;
-  background-position: bottom 5px right 7px;
-  background-repeat: no-repeat;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  /* flex: 1; */
-  /* overflow: auto; */
-  margin-left: 220px;
-  margin-right: 250px;
-  padding: 30px;
-}
-
 /* main {
   display: flex;
   flex-direction: column;
@@ -135,64 +164,3 @@ main {
   margin-right: 250px;
   padding: 30px;
 } */
-
-.purple-text {
-  color: #7670D8;
-}
-
-.view-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-}
-
-.view-card {
-  transform-style: preserve-3d;
-  background-color: #E8E7EE;
-  border: 10px;
-  border-radius: 10px;
-  font-family: 'AvenirNext';
-  font-style: normal;
-}
-
-.statement {
-  padding: 30px;
-  padding-top: 0;
-  font-size: 42px;
-  height: 350px;
-  width: 425px;
-}
-
-.login-button, .register-button {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.login-form label, .register-form label {
-  align-self: left;
-}
-
-.login-form span, .register-form span {
-  font-size: 12px;
-  text-align: center;
-}
-
-.pword-forgot {
-  text-align: right;
-  width: 100%;
-}
-
-.view-wrapper a {
-  text-decoration: none;
-  font-weight: bold;
-  color: black;
-}
-
-.q-wrap {
-  width: 100%;
-  text-align: center;
-}
