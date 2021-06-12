@@ -7,7 +7,7 @@ const Sidebar = (props) => {
     let sidebar = props.user ?
         <div className="sidebar-wrapper">
             <div className="user-wrapper">
-                <img alt="User profile image" className="nav-link-icon" src="./icons/Avatar.png" />
+                <img alt="User profile avatar" className="nav-link-icon" src="./icons/Avatar.png" />
                 <span>{props.user.name}</span>
             </div>
 

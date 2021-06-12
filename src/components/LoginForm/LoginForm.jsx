@@ -31,10 +31,10 @@ class LoginForm extends Component {
             <div className="login-form-wrapper">
                 <form className="login-form" onSubmit={this.handleSubmit}>
                     <div>
-                        <label className="login-label" for="email">Email address</label>
+                        <label className="login-label" htmlFor="email">Email address</label>
                         <input type="email" className="login-input" placeholder="learner@grasp.com" value={this.state.email} name="email" onChange={this.handleChange} />
                     
-                        <label className="login-label" for="password">Password</label>
+                        <label className="login-label" htmlFor="password">Password</label>
                         <input type="password" className="login-input" placeholder="" value={this.state.pw} name="pw" onChange={this.handleChange} />
                         <div className="forgot-password">
                             <div className="login-subtext">Forgot Password?</div>

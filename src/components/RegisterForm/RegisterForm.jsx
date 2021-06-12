@@ -36,16 +36,16 @@ class RegisterForm extends Component {
             <div className="register-form-wrapper">
                 <form autocomplete="off" className="register-form" onSubmit={this.handleSubmit}>
                     <div>
-                        <label className="register-label" for="text">Name</label>
+                        <label className="register-label" htmlFor="text">Name</label>
                         <input type='text' className="register-input" value={this.state.name} name='name' onChange={this.handleChange} />
 
-                        <label for="email" className="register-label">Email address</label><br />
+                        <label htmlFor="email" className="register-label">Email address</label><br />
                         <input type="email" className="register-input" value={this.state.email} name="email" onChange={this.handleChange} />
                         
-                        <label for="password" className="register-label">Password</label>
+                        <label htmlFor="password" className="register-label">Password</label>
                         <input type="password" className="register-input" placeholder="" value={this.state.password} name="password" onChange={this.handleChange} />
                         
-                        <label for="passwordConfirm" className="register-label">Confirm Password</label>
+                        <label htmlFor="passwordConfirm" className="register-label">Confirm Password</label>
                         <input type="password" className="register-input" placeholder="" value={this.state.passwordConfirm} name="passwordConfirm" onChange={this.handleChange} />
                     </div>
                     
