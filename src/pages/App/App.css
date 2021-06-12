@@ -70,9 +70,13 @@ a {
   display: block;
   border-radius: 5px;
   border: 1px solid lightgrey;
-  font: 12px 'AvenirNext-UltraLight';
+  font-family: 'AvenirNext';
   padding-left: 10px;
   margin: 5px 0 10px;
+}
+
+::placeholder {
+  font-family: 'AvenirNext-UltraLight';
 }
 
 .login-button, .register-button {
