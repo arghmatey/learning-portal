@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import './App.css';
-import LoginForm from '../../components/LoginForm/LoginForm';
-import RegisterForm from '../../components/RegisterForm/RegisterForm';
 import Dashboard from '../Dashboard/Dashboard'
 import userService from '../../utils/userService';
 import favAppService from '../../utils/favAppService';
+import LoginPage from '../LoginPage';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       user: userService.getUser(),
-      favApps: [],
       view: 'login',
+      favApps: [],
       message: '',
     };
   }
@@ -59,42 +57,13 @@ class App extends Component {
           getFavList={this.getFavList}
         />
       :
-      <div className="login-page">
-        <header className="login-header">
-          <nav className="login-nav">
-            <img className="app-logo" alt="logo" src="./icons/Logo.png" />
-            <div className="login-nav-links">
-              <Link to=''>How It Works</Link>
-              <Link to=''>Request a Demo</Link>
-              <Link to=''>About Us</Link>
-            </div>
-          </nav>
-        </header>
-        <main className="App-main">
-          <div className="view-wrapper">
-            <div className="view-card">
-              {
-                this.state.view === 'login' ?
-                  <LoginForm
-                    history={this.history}
-                    handleRegisterOrLogin={this.handleRegisterOrLogin}
-                    handleViewChange={this.handleViewChange}
-                  />
-                  :
-                  <RegisterForm
-                    history={this.history}
-                    handleRegisterOrLogin={this.handleRegisterOrLogin}
-                    handleViewChange={this.handleViewChange}
-                    updateMessage={this.updateMessage}
-                  />
-              }
-            </div>
-            <div className="statement">Digital learning all in one place. It's time to get a <span className="purple-text">grasp</span> on things.</div>
-          </div >
-
-        </main>
-      </div>
-
+      <LoginPage                            
+        history={this.history}
+        view={this.state.view}
+        handleRegisterOrLogin={this.handleRegisterOrLogin}
+        handleViewChange={this.handleViewChange}
+        updateMessage={this.updateMessage}
+      />
 
     return (
       <div className="all-wrapper">

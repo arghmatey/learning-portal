@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import userService from '../../utils/userService';
-import './LoginForm.css';
 
 class LoginForm extends Component {
 
@@ -29,23 +28,23 @@ class LoginForm extends Component {
 
     render() {
         return (
-            <div className="login-form">
-                <form onSubmit={this.handleSubmit} >
-                    <label for="email">Email address</label><br />
-                    <input type="email" className="form-control" placeholder="learner@grasp.com" value={this.state.email} name="email" onChange={this.handleChange} />
-                    <br />
-                    <br />
-                    <label for="password">Password</label>
-                    <br />
-                    <input type="password" className="form-control" placeholder="" value={this.state.pw} name="pw" onChange={this.handleChange} />
-                    <div className="pword-forgot">
-                        <span>Forgot Password?</span>
+            <div className="login-form-wrapper">
+                <form className="login-form" onSubmit={this.handleSubmit}>
+                    <div>
+                        <label className="login-label" for="email">Email address</label>
+                        <input type="email" className="login-input" placeholder="learner@grasp.com" value={this.state.email} name="email" onChange={this.handleChange} />
+                    
+                        <label className="login-label" for="password">Password</label>
+                        <input type="password" className="login-input" placeholder="" value={this.state.pw} name="pw" onChange={this.handleChange} />
+                        <div className="forgot-password">
+                            <div className="login-subtext">Forgot Password?</div>
+                        </div>
                     </div>
-                    <br />
-                    <div className="login-button">
-                        <button className="lb">Log In</button>
+
+                    <div className="button-wrapper">
+                        <button className="login-button">LOGIN</button>
+                        <div className="login-subtext">Don't have an account? <button type="button" className="view-change" onClick={this.props.handleViewChange} value="register">Create one</button></div>
                     </div>
-                    <span>Don't have an account? <button type="button" className="view-change" onClick={this.props.handleViewChange} value="register">Create one</button></span>
                 </form >
             </div>
         );
