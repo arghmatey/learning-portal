@@ -138,6 +138,7 @@ a {
 /* side nav bar (left)*/
 .App-header {
   width: 220px;
+  min-width: 220px;
   height: 100%;
   padding: 10px 0px;
 }
@@ -151,8 +152,14 @@ a {
 }
 
 .home-wrapper {
-  margin: 40px;
+  height: 100%;
+  margin: 0 40px;
+  padding: 40px 0;
   position: relative;
+  background: url('../../assets/images/home.png');
+  background-size: 40%;
+  background-position: bottom 5px right 7px;
+  background-repeat: no-repeat;
 }
 
 .home-search {
