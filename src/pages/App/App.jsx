@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Dashboard from '../Dashboard/Dashboard'
+import Dashboard from '../Dashboard'
 import userService from '../../utils/userService';
 import favAppService from '../../utils/favAppService';
 import LoginPage from '../LoginPage';

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AppList from '../../components/AppList/AppList';
+import AppList from '../components/AppList';
 
 class HomePage extends Component {
     render() {

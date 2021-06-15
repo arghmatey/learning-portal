@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
-import NavBar from '../../components/NavBar/NavBar';
-import Sidebar from '../../components/Sidebar/Sidebar';
-import AppPage from '../AppPage/AppPage';
-import HomePage from '../HomePage/HomePage';
-import ChatPage from '../ChatPage/ChatPage';
-import ProgressPage from '../ProgressPage/ProgressPage';
-import './Dashboard.css';
+import NavBar from '../components/NavBar/NavBar';
+import Sidebar from '../components/Sidebar/Sidebar';
+import HomePage from './HomePage';
+import ChatPage from './ChatPage/ChatPage';
+import ProgressPage from './ProgressPage/ProgressPage';
+
+// import AppPage from '../AppPage/AppPage';
 
 class Dashboard extends Component {
 
@@ -27,7 +27,7 @@ class Dashboard extends Component {
                         />
                     }
                     />
-                    <Route exact path='/apps' render={() =>
+                    {/* <Route exact path='/apps' render={() =>
                         <AppPage
                             user={this.props.user}
                             favApps={this.props.favApps}
@@ -35,7 +35,7 @@ class Dashboard extends Component {
                             getFavList={this.props.getFavList}
                         />
                     }
-                    />
+                    /> */}
                     <Route exact path='/progress' render={() =>
                         <ProgressPage
                             user={this.props.user}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import AppDetail from '../AppDetail/AppDetail';
-import apps from "../../utils/data.js";
+import AppDetail from './AppDetail';
+import apps from '../utils/data.js';
 
 export default class AppList extends Component {
 
