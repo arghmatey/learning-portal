@@ -12,12 +12,12 @@ class Dashboard extends Component {
 
     render() {
         return (
-            <div className="App">
+            <div className="dashboard">
                 <NavBar
                     user={this.props.user}
                     handleLogout={this.props.handleLogout}
                 />
-                <main>      
+                <main className="dashboard-main">      
                     <Route exact path='/' render={() =>
                         <HomePage
                             user={this.props.user}
