@@ -7,6 +7,7 @@ class HomePage extends Component {
             <div className="home-wrapper">
                 <div className="home-search">Search bar</div>
                 <h2 className="home-welcome">Welcome back, {this.props.user.name}</h2>
+                <h3>Favorite Apps</h3>
                 <AppList
                     user={this.props.user}
                     favApps={this.props.favApps}

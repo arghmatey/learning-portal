@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import apps from "../../utils/data.js"
+import AppDetail from '../AppDetail/AppDetail';
+import apps from "../../utils/data.js";
 
 export default class AppList extends Component {
 
@@ -7,12 +8,11 @@ export default class AppList extends Component {
         return (
             <div className="application-info">
                 {apps.map(app =>
-                    <div className="application-details">
-                        <a href={app.url}>
-                            <img alt={app.name} src={app.img} className="appButton" />
-                        </a>
-                        <div>{app.name}</div>
-                    </div>
+                    <AppDetail 
+                        name={app.name}
+                        url={app.url}
+                        img={app.img}
+                    />
                 )}
             </div>
         )

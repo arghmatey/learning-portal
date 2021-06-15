@@ -151,7 +151,7 @@ a {
 }
 
 .home-wrapper {
-  padding: 50px 0;
+  margin: 40px;
   position: relative;
 }
 
@@ -160,7 +160,7 @@ a {
 }
 
 .home-welcome {
-  padding: 40px;
+  padding: 40px 0;
   font: 28px 'AvenirNext-Medium';
 }
 
@@ -169,6 +169,19 @@ a {
   display: flex;
   position: absolute;
   overflow-x: scroll; 
+}
+
+.application-details {
+  margin: 0 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.application-image {
+  height: 110px;
+  width: 110px;
+  border-radius: 5px;
+  box-shadow: -2px 2px 5px 0px #B0AFB5;
 }
 
 /* side bar (right) */
