@@ -1,30 +1,18 @@
 import React, { Component } from 'react';
-import './HomePage.css';
-
+import AppList from '../../components/AppList/AppList';
 
 class HomePage extends Component {
     render() {
         return (
-            <>
-           <div> <h3>Your Apps</h3>
-            <div> {
-                this.props.favApps.length > 0 ?
-                    this.props.favApps.map(app =>
-                        <>
-                            <a href={app.url}>
-                                <img alt={app.name} src={app.img} className="appButton" />
-                            </a>
-                            {app.name}
-                        </>
-                    )
-                    : <div>add an app</div>}
-                </div>
-                </div>
-                
-           <div>
-               <img id='dashboard' alt="" src="./icons/pics/dashboard.png" />
-           </div>
-           </>
+            <div className="home-wrapper">
+                <div className="home-search">Search bar</div>
+                <h2 className="home-welcome">Welcome back, {this.props.user.name}</h2>
+                <AppList
+                    user={this.props.user}
+                    favApps={this.props.favApps}
+                    handleFavApp={this.props.handleFavApp} 
+                />
+            </div>
         );
     }
 }

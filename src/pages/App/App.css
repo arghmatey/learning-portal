@@ -6,11 +6,14 @@
 
 html, body, #root, .all-wrapper {
   height: 100%;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 body {
    margin: 0;
    font-family: 'AvenirNext';
+   max-width: 100vw;
 }
 
 a {
@@ -124,46 +127,55 @@ a {
   width: 450px;
 }
 
-/* BELOW: Dashboard view css
+/* BELOW: Dashboard view css */
+.dashboard {
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  background-image: linear-gradient(#3C3F89, #7670D8);
+}
+
 /* side nav bar (left)*/
 .App-header {
   width: 220px;
   height: 100%;
-  background-image: linear-gradient(#3C3F89, #7670D8);
   padding: 10px 0px;
-  position: fixed;
-  top: 0;
-  left: 0;
+}
+
+/* main section (middle) */
+.dashboard-main {
+  height: 100%;
+  background-color: white;
+  flex: 1;
+  border-radius: 40px 0 0 40px;
+}
+
+.home-wrapper {
+  padding: 50px 0;
+  position: relative;
+}
+
+.home-search {
+  float: right;
+}
+
+.home-welcome {
+  padding: 40px;
+  font: 28px 'AvenirNext-Medium';
+}
+
+.application-info {
+  max-width: 100%;
+  display: flex;
+  position: absolute;
+  overflow-x: scroll; 
 }
 
 /* side bar (right) */
 .App-aside {
-  width: 250px;
+  width: 325px;
   height: 100%;
-  background: white;
   color: black;
   padding: 10px 0px;
-  position: fixed;
-  top: 0;
-  right: 0;
   background-color: #E8E7EE;
 }
-
-/* main section (middle) */
-.App-main {
-  display: flex;
-  align-items: center;
-  flex: 1;
-  overflow: auto;
-}
-
-/* main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-  overflow: auto;
-  margin-left: 220px;
-  margin-right: 250px;
-  padding: 30px;
-} */
