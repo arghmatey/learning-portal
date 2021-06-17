@@ -1,21 +1,40 @@
-.todoListMain .header input {
+.task-wrapper {
+    height: 100px;
+    width: 200px;
+    margin-top: 50px;
+    outline: 1px solid blue;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+
+
+
+
+
+
+.taskListMain .header input {
     padding: 1px;
     font-size: 16px;
     border: 2px solid #fff;
     width: 165px;
 }
 
-.todoListMain .header button {
+.taskListMain .header button {
     padding: 1px;
     font-size: 16px;
     margin: 0px;
     margin-right: 0px;
     border:  solid #fff
 }
-.todoListMain .header button:hover {
+.taskListMain .header button:hover {
     cursor: pointer;
 }
-.todoListMain .theList li {
+
+.taskListMain .theList li {
     list-style: none;
     text-align: left;
     margin-left: -10px;

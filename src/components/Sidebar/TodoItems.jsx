@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class TodoItems extends Component {
+class TaskItems extends Component {
     constructor(props) {
         super(props);
 
@@ -17,8 +17,8 @@ class TodoItems extends Component {
     }
     
     render() {
-        var todoEntries = this.props.entries;
-        var listItems = todoEntries.map(this.createTasks);
+        var taskEntries = this.props.entries;
+        var listItems = taskEntries.map(this.createTasks);
    
         return (
             <ul className="theList">
@@ -28,4 +28,4 @@ class TodoItems extends Component {
     }
 }
 
-export default TodoItems;
+export default TaskItems;

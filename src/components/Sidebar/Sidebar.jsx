@@ -1,5 +1,5 @@
 import React from 'react';
-import TodoList from '../TodoList/TodoList';
+import TaskList from '../TaskList/TaskList';
 import Calendar from './Calendar';
 import './Sidebar.css';
 
@@ -14,9 +14,7 @@ const Sidebar = (props) => {
 
             <Calendar />
 
-            <div className="todo-wrapper">
-                <TodoList/>
-            </div>
+            <TaskList/>
         </div>
     );
 };
