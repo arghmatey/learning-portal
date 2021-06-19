@@ -14,13 +14,6 @@
     font-family: 'AvenirNext-Medium';
 }
 
-.todo-wrapper {
-    height: 100px;
-    width: 200px;
-    margin-top: 50px;
-    outline: 1px solid blue;
-}
-
 .cal-wrapper {
     margin-top: 50px;
     padding: 20px;

@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import "./TaskList.css";
 
-
-
 class TaskList extends Component {
     // constructor(props) {
     //     super(props);
@@ -53,12 +51,16 @@ class TaskList extends Component {
 
 
             <div className="task-wrapper">
-                <div><span>Tasks</span><span>+</span></div>
-                <ul className="task-list">
-                    <li><input type="checkbox" /></li>
-                    <li><input type="checkbox" /></li>
-                    <li><input type="checkbox" /></li>
-                </ul>
+                <div className="task-decoration"></div>
+                <div>
+                <div className="task-header"><h3>Tasks</h3><span>+</span></div>
+                    <ul className="task-list">
+                        <li className="task-list-item">
+                            <div className="task-list-checkbox"><input type="checkbox"/></div> 
+                            <label className="task-list-text">Complete one project task or two or three</label>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
 

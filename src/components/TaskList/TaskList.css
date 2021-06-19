@@ -1,43 +1,47 @@
 .task-wrapper {
-    height: 100px;
-    width: 200px;
+    width: 260px;
+    height: 200px;
     margin-top: 50px;
-    outline: 1px solid blue;
+    border-radius: 8px;
+    border: 1px solid lightgrey;
+    background-color: white;
+    box-shadow: 0px 2px 2px 0px lightgrey;
+    display: flex;
+}
+
+.task-decoration {
+    background-color: #7670D8;
+    border-radius: 8px 0 0 8px;
+    height: 100%;
+    width: 15px;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px 0 10px;
+}
+
+.task-header h3 {
+    margin: 0;
 }
 
 .task-list {
     list-style: none;
     padding: 0;
+    margin-top: 10px;
 }
 
-
-
-
-
-
-
-.taskListMain .header input {
-    padding: 1px;
-    font-size: 16px;
-    border: 2px solid #fff;
-    width: 165px;
+.task-list-item {
+    display: flex;
 }
 
-.taskListMain .header button {
-    padding: 1px;
-    font-size: 16px;
-    margin: 0px;
-    margin-right: 0px;
-    border:  solid #fff
-}
-.taskListMain .header button:hover {
-    cursor: pointer;
+.task-list-checkbox {
+    height: 100%;
+    padding: 0 7px;
 }
 
-.taskListMain .theList li {
-    list-style: none;
-    text-align: left;
-    margin-left: -10px;
-    margin-top: -2px;
-    font-size: 12px;
+.task-list-text {
+    font-size: 14px;
 }
