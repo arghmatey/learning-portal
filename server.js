@@ -17,6 +17,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 // API routes under here
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/favApps', require('./routes/api/favApps'));
+app.use('/api/tasks', require('./routes/api/tasks'));
 
 app.use(require('./config/auth'));
 // login protected routes under here

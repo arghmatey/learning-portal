@@ -4,6 +4,16 @@ const Schema = mongoose.Schema;
 
 const SALT_ROUNDS = 6;
 
+const taskSchema= new Schema ({
+    text: String,
+    completed: {
+        type: Boolean,
+        default: false
+    }
+}, {
+    timestamps: true
+});
+
 const userSchema = new Schema({
     name: String,
     email: {
@@ -13,7 +23,7 @@ const userSchema = new Schema({
         unique: true
     },
     password: String,
-    todos: [],
+    tasks: [taskSchema],
 }, {
     timestamps: true
 });
