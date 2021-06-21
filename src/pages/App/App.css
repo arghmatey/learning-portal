@@ -171,25 +171,26 @@ a {
   font: 28px 'AvenirNext-Medium';
 }
 
-.application-info {
-  max-width: 100%;
-  display: flex;
-  position: absolute;
-  overflow-x: scroll; 
-}
+  /* app slider */
+  .application-info {
+    max-width: 100%;
+    display: flex;
+    position: absolute;
+    overflow-x: scroll; 
+  }
 
-.application-details {
-  margin: 0 10px;
-  text-align: center;
-  font-size: 14px;
-}
+  .application-details {
+    margin: 0 20px 5px 0;
+    text-align: center;
+    font-size: 12px;
+  }
 
-.application-image {
-  height: 110px;
-  width: 110px;
-  border-radius: 5px;
-  box-shadow: -2px 2px 5px 0px #B0AFB5;
-}
+  .application-image {
+    height: 110px;
+    width: 110px;
+    border-radius: 5px;
+    box-shadow: -2px 2px 5px 0px #B0AFB5;
+  }
 
 /* side bar (right) */
 .App-aside {
