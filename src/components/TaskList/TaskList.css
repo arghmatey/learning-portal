@@ -16,8 +16,13 @@
     width: 15px;
 }
 
+.task-list-wrapper {
+    width: 100%;
+}
+
 .task-header {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 15px 10px 0 10px;
