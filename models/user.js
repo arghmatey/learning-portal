@@ -1,15 +1,13 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+const { createTextSpanFromBounds } = require('typescript');
 const Schema = mongoose.Schema;
 
 const SALT_ROUNDS = 6;
 
 const taskSchema= new Schema ({
     text: String,
-    completed: {
-        type: Boolean,
-        default: false
-    }
+    completed: Boolean
 }, {
     timestamps: true
 });
