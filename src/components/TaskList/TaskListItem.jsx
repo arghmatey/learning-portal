@@ -1,7 +1,19 @@
+// This component uses React Hooks
+
 import React, { useState, useEffect } from "react";
 
 function TaskListItem(props) {
     const [formData, setFormData] = useState(props.task)
+
+    const handleChangeCompleted = e => {
+        e.persist();
+        setFormData(formData => ({...formData, completed: e.target.checked}));
+    }
+
+    const handleChangeText = e => {
+        e.persist();
+        setFormData(formData => ({...formData, text: e.target.value}));
+    }
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -15,16 +27,16 @@ function TaskListItem(props) {
                     <input 
                         name="completed"
                         type="checkbox" 
-                        checked={props.task.completed}
-                        onChange={props.handleChangeCompleted(props.index)}
+                        checked={formData.completed}
+                        onChange={handleChangeCompleted}
                         />
                 </div> 
                 <label className="task-list-text">
                     <input
                         name="text" 
                         type="text"
-                        value={props.task.text}
-                        onChange={props.handleChangeTaskText(props.index)}
+                        value={formData.text}
+                        onChange={handleChangeText}
                         required
                     />
                 </label>
