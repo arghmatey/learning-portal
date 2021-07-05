@@ -7,7 +7,6 @@ export function getAll() {
 }
 
 export function create(formData) {
-    console.log(formData, 'formData');
     return fetch(BASE_URL, {
         method: 'POST',
         headers: {

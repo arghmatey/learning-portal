@@ -7,7 +7,7 @@ const Calendar = () => {
 
     useEffect(() => {
         var today = new Date;
-        console.log(today.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
+        // console.log(today.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
     })
 
     return (

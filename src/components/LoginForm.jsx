@@ -18,11 +18,10 @@ class LoginForm extends Component {
         e.preventDefault();
         try {
             await userService.login(this.state);
-            console.log('made it this far');
             this.props.handleRegisterOrLogin();
             this.props.history.push('/');
         } catch (err) {
-            console.log('Invalid login');
+            console.log(err);
         }
     }
 
