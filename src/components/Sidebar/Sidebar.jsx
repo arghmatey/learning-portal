@@ -14,7 +14,9 @@ const Sidebar = (props) => {
 
             <Calendar />
 
-            <TaskList/>
+            <TaskList
+                user={props.user}
+            />
         </div>
     );
 };
