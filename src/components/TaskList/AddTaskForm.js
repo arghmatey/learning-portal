@@ -27,14 +27,14 @@ const AddTaskForm = (props) => {
         <form autoComplete="off" onBlur={handleSubmit}>
             <li className="add-task-list-item">
                 <div className="task-list-checkbox">
-                    <input 
+                    <input
                         name="completed"
                         type="checkbox" 
                         checked={formData.completed}
                         onChange={handleChangeCompleted}/>
                 </div> 
                 <label className="task-list-text">
-                    <input
+                    <textarea
                         name="text" 
                         type="text"
                         value={formData.text}

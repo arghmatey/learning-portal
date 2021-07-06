@@ -1,4 +1,4 @@
-.task-wrapper {
+.task-component-wrapper {
     width: 260px;
     height: 200px;
     margin-top: 50px;
@@ -16,7 +16,7 @@
     width: 15px;
 }
 
-.task-list-wrapper {
+.task-wrapper {
     width: 100%;
 }
 
@@ -25,11 +25,22 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 10px 0 10px;
+    padding: 10px 10px 5px 10px;
 }
 
 .task-header h3 {
     margin: 0;
+}
+
+.add-task-button {
+    background-color: white;
+    border: none;
+    font: 18px 'AvenirNext-Medium';
+}
+
+.task-list-wrapper {
+    height: 75%;
+    overflow: scroll;
 }
 
 .task-list {
@@ -49,4 +60,17 @@
 
 .task-list-text {
     font-size: 14px;
+    width: 80%;
+}
+
+.task-list-text-input {
+    width: 100%;
+    resize: none;
+    font-family: inherit;
+    font-size: 14px;
+    border: none;
+}
+
+.task-list-text-input:focus {
+    outline: none;
 }

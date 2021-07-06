@@ -24,7 +24,7 @@ function TaskListItem(props) {
         <form autoComplete="off" onBlur={handleSubmit(props.index)}>
             <li className="task-list-item">
                 <div className="task-list-checkbox">
-                    <input 
+                    <input
                         name="completed"
                         type="checkbox" 
                         checked={formData.completed}
@@ -32,9 +32,10 @@ function TaskListItem(props) {
                         />
                 </div> 
                 <label className="task-list-text">
-                    <input
-                        name="text" 
-                        type="text"
+                    <textarea
+                        className="task-list-text-input"
+                        name="text"
+                        rows="1"
                         value={formData.text}
                         onChange={handleChangeText}
                         required

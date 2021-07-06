@@ -43,24 +43,26 @@ class TaskList extends Component {
     render() {
         return (
 
-            <div className="task-wrapper">
+            <div className="task-component-wrapper">
                 <div className="task-decoration"></div>
-                <div className="task-list-wrapper">
+                <div className="task-wrapper">
                     <div className="task-header">
                         <h3>Tasks</h3>
-                        <button onClick={this.addNewTaskForm}>+</button>
+                        <button className="add-task-button" onClick={this.addNewTaskForm}>+</button>
                     </div>
-                    <ul className="task-list">
-                        {this.state.tasks.map((task, idx) => (
-                            <TaskListItem
-                                task={task}
-                                key={task._id}
-                                index={idx}
-                                handleUpdateTask={this.handleUpdateTask}
-                            />
-                        ))}
-                        {this.state.form}
-                    </ul>
+                    <div className="task-list-wrapper">
+                        <ul className="task-list">
+                            {this.state.tasks.map((task, idx) => (
+                                <TaskListItem
+                                    task={task}
+                                    key={task._id}
+                                    index={idx}
+                                    handleUpdateTask={this.handleUpdateTask}
+                                />
+                            ))}
+                            {this.state.form}
+                        </ul>
+                    </div>
                 </div>
             </div>
         );
