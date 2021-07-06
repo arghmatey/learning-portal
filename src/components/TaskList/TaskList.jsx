@@ -1,78 +1,68 @@
 import React, { Component } from "react";
+import tasksService from "../../utils/tasksService";
+import TaskListItem from "./TaskListItem";
+import AddTaskForm from "./AddTaskForm";
+
 import "./TaskList.css";
 
 class TaskList extends Component {
-    // constructor(props) {
-    //     super(props);
+    state = {
+        tasks: [],
+        form: []
+    }
 
-    //     this.state = {
-    //         items: []
-    //     };
+    handleAddTask = async (formData) => {
+        const newTask = await tasksService.create(formData, this.props.user._id);
+        this.setState({
+            tasks: [...this.state.tasks, newTask],
+            form: []
+        });
+    }
 
-    //     this.addItem = this.addItem.bind(this);
-    //     this.deleteItem = this.deleteItem.bind(this);
-    // }
+    addNewTaskForm = e => {        
+        const form = this.state.form;
+        this.setState({
+            form: form.concat(<AddTaskForm handleAddTask={this.handleAddTask}/>)
+        });
+    }
 
-    // addItem(e) {
-    //     if (this._inputElement.value !== "") {
-    //         var newItem = {
-    //             text: this._inputElement.value,
-    //             key: Date.now()
-    //         };
+    handleUpdateTask = async (updatedTaskData, index) => {
+        const updatedUser = await tasksService.update(updatedTaskData, this.props.user._id);
+        const updatedTasksArray = this.state.tasks;
+        updatedTasksArray[index] = updatedUser.tasks[index]
+        this.setState(
+            {tasks: updatedTasksArray}
+        )
+      };
 
-    //         this.setState((prevState) => {
-    //             return {
-    //                 items: prevState.items.concat(newItem)
-    //             };
-    //         });
-    //     }
-
-    //     this._inputElement.value = "";
-
-    //     console.log(this.state.items);
-
-    //     e.preventDefault();
-    // }
-
-    // deleteItem(key) {
-    //     var filteredItems = this.state.items.filter(function (item) {
-    //         return (item.key !== key)
-    //     });
-
-    //     this.setState({
-    //         items: filteredItems
-
-    //     });
-    // }
-
+    async componentDidMount() {
+        const tasks = await tasksService.getAll(this.props.user._id);
+        this.setState({ tasks: tasks })
+      }
 
     render() {
         return (
 
-
             <div className="task-wrapper">
                 <div className="task-decoration"></div>
-                <div>
-                <div className="task-header"><h3>Tasks</h3><span>+</span></div>
+                <div className="task-list-wrapper">
+                    <div className="task-header">
+                        <h3>Tasks</h3>
+                        <button onClick={this.addNewTaskForm}>+</button>
+                    </div>
                     <ul className="task-list">
-                        <li className="task-list-item">
-                            <div className="task-list-checkbox"><input type="checkbox"/></div> 
-                            <label className="task-list-text">Complete one project task or two or three</label>
-                        </li>
+                        {this.state.tasks.map((task, idx) => (
+                            <TaskListItem
+                                task={task}
+                                key={task._id}
+                                index={idx}
+                                handleUpdateTask={this.handleUpdateTask}
+                            />
+                        ))}
+                        {this.state.form}
                     </ul>
                 </div>
             </div>
-
-
-            // <div className="taskListMain">
-            //     <div className="header">
-            //         <form onSubmit={this.addItem}>
-            //             <input ref={(a) => this._inputElement = a}
-            //             placeholder="Tasks"/>
-            //             <button type="submit">+</button>
-            //         </form>
-            //     </div>
-            // </div>
         );
     }
 }

@@ -15,13 +15,13 @@ function TaskListItem(props) {
         setFormData(formData => ({...formData, text: e.target.value}));
     }
 
-    const handleSubmit = e => {
+    const handleSubmit = index => e => {
         e.preventDefault();
-        props.handleUpdateTask(formData)
+        props.handleUpdateTask(formData, index)
     }
 
     return (
-        <form autoComplete="off" onBlur={handleSubmit}>
+        <form autoComplete="off" onBlur={handleSubmit(props.index)}>
             <li className="task-list-item">
                 <div className="task-list-checkbox">
                     <input 
