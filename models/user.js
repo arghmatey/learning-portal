@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
-const { createTextSpanFromBounds } = require('typescript');
 const Schema = mongoose.Schema;
 
 const SALT_ROUNDS = 6;
