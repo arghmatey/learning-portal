@@ -21,6 +21,10 @@ const userSchema = new Schema({
     },
     password: String,
     tasks: [taskSchema],
+    chats: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Chat'
+    }]
 }, {
     timestamps: true
 });
