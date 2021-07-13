@@ -14,18 +14,19 @@ app.use(express.json());
 app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 
-// API routes under here
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/favApps', require('./routes/api/favApps'));
 app.use('/api/tasks', require('./routes/api/tasks'));
 
 app.use(require('./config/auth'));
-// login protected routes under here
 
-// This is the catch all. Comment can be deleted when ready.
 app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
+
+
+
+
 
 const port = process.env.PORT || 3001;
 
