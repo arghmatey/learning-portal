@@ -1,12 +1,14 @@
 // This component uses React Hooks. 
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 const AddTaskForm = (props) => {
     const [formData, setFormData] = useState({
         completed: false,
         text: ''
     })
+
+    const focusedInput = useRef(null);
 
     const handleChangeText = e => {
         e.persist();
@@ -23,9 +25,13 @@ const AddTaskForm = (props) => {
         props.handleAddTask(formData)
     }
 
+    useEffect(() => {
+        focusedInput.current.focus();
+    }, [])
+
     return (
         <form autoComplete="off" onBlur={handleSubmit}>
-            <li className="add-task-list-item">
+            <li className="task-list-item">
                 <div className="task-list-checkbox">
                     <input
                         name="completed"
@@ -35,8 +41,9 @@ const AddTaskForm = (props) => {
                 </div> 
                 <label className="task-list-text">
                     <textarea
-                        name="text" 
-                        type="text"
+                        ref={focusedInput}
+                        className="task-list-text-input"
+                        name="text"
                         value={formData.text}
                         onChange={handleChangeText}
                         required
