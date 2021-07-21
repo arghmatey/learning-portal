@@ -1,21 +1,21 @@
 @font-face {
   font-family: 'AvenirNext';
-  src: local('AvenirNext'), url(./fonts/AvenirNext-Regular.ttf) format('truetype');
+  src: local('AvenirNext'), url(./assets/fonts/AvenirNext-Regular.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'AvenirNext-UltraLight';
-  src: local('AvenirNext-UltraLight'), url(./fonts/AvenirNext-UltraLight.ttf) format('truetype');
+  src: local('AvenirNext-UltraLight'), url(./assets/fonts/AvenirNext-UltraLight.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'AvenirNext-Medium';
-  src: local('AvenirNext-Medium'), url(./fonts/AvenirNext-Medium.ttf) format('truetype');
+  src: local('AvenirNext-Medium'), url(./assets/fonts/AvenirNext-Medium.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'AvenirNext-Bold';
-  src: local('AvenirNext-Bold'), url(./fonts/AvenirNext-Bold.ttf) format('truetype');
+  src: local('AvenirNext-Bold'), url(./assets/fonts/AvenirNext-Bold.ttf) format('truetype');
 }
 
 body {
