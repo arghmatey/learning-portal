@@ -33,7 +33,7 @@ class TaskList extends Component {
         this.setState(
             {tasks: updatedTasksArray}
         )
-      };
+    };
 
     async componentDidMount() {
         const tasks = await tasksService.getAll(this.props.user._id);
@@ -52,14 +52,15 @@ class TaskList extends Component {
                     </div>
                     <div className="task-list-wrapper">
                         <ul className="task-list">
-                            {this.state.tasks.map((task, idx) => (
-                                <TaskListItem
-                                    task={task}
-                                    key={task._id}
-                                    index={idx}
-                                    handleUpdateTask={this.handleUpdateTask}
-                                />
-                            ))}
+                            {this.state.tasks.map((task, idx) => {
+                                if (!task.completed) 
+                                    return <TaskListItem
+                                        task={task}
+                                        key={task._id}
+                                        index={idx}
+                                        handleUpdateTask={this.handleUpdateTask}
+                                    />
+                                })}
                             {this.state.form}
                         </ul>
                     </div>
