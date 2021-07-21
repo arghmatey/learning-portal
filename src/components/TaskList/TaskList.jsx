@@ -12,11 +12,17 @@ class TaskList extends Component {
     }
 
     handleAddTask = async (formData) => {
-        const newTask = await tasksService.create(formData, this.props.user._id);
-        this.setState({
-            tasks: [...this.state.tasks, newTask],
-            form: []
-        });
+        if (!formData.text) {
+            this.setState({
+                form: []
+            });
+        } else {
+            const newTask = await tasksService.create(formData, this.props.user._id);
+            this.setState({
+                tasks: [...this.state.tasks, newTask],
+                form: []
+            });
+        };
     }
 
     addNewTaskForm = e => {        

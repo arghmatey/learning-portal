@@ -6,7 +6,7 @@ const AddTaskForm = (props) => {
     const [formData, setFormData] = useState({
         completed: false,
         text: ''
-    })
+    });
 
     const focusedInput = useRef(null);
 
@@ -22,12 +22,12 @@ const AddTaskForm = (props) => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        props.handleAddTask(formData)
+        props.handleAddTask(formData);
     }
 
     useEffect(() => {
         focusedInput.current.focus();
-    }, [])
+    }, []);
 
     return (
         <form autoComplete="off" onBlur={handleSubmit}>

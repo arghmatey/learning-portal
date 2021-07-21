@@ -40,7 +40,8 @@
 
 .task-list-wrapper {
     height: 75%;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .task-list {
